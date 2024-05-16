@@ -42,11 +42,11 @@ def process_csv_and_cluster(file_path, num_clusters):
 
         # Insertar resultados de clustering en la base de datos
         connection = psycopg2.connect(
-            dbname="tu_base_de_datos",
-            user="tu_usuario",
-            password="tu_contraseña",
-            host="tu_host",
-            port="tu_puerto"
+            dbname="entrega_owner",
+            user="entrega_owner_owner",
+            password="Rofg6C8BcTVk",
+            host="ep-muddy-band-a581f951.us-east-2.aws.neon.tech",
+            port=5432
         )
 
         insert_query = """
