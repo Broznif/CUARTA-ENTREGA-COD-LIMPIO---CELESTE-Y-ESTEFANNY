@@ -1,5 +1,10 @@
-class ClusteringResult:
-    def __init__(self, filename, num_clusters, cluster_results):
-        self.filename = filename
-        self.num_clusters = num_clusters
-        self.cluster_results = cluster_results
+class ClusterData:
+    def __init__(self, id, data_text):
+        self.id = id
+        self.data_text = data_text
+
+class ClusterInfo:
+    def __init__(self, id, cluster_text, description):
+        self.id = id
+        self.cluster_text = cluster_text
+        self.description = description
