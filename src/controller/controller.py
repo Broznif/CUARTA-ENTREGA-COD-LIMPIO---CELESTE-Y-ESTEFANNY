@@ -5,11 +5,11 @@ from sklearn.cluster import KMeans
 def create_tables():
     # Configurar la conexión a la base de datos PostgreSQL
     connection = psycopg2.connect(
-        dbname="tu_base_de_datos",
-        user="tu_usuario",
-        password="tu_contraseña",
-        host="tu_host",
-        port="tu_puerto"
+        dbname="entrega_owner",
+        user="entrega_owner_owner",
+        password="Rofg6C8BcTVk",
+        host="ep-muddy-band-a581f951.us-east-2.aws.neon.tech",
+        port=5432
     )
 
     # Crear tabla para almacenar los resultados del clustering
