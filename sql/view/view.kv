@@ -1,0 +1,22 @@
+<ClusteringApp>:
+    GridLayout:
+        cols: 1
+        padding: 10
+        spacing: 10
+
+        Label:
+            text: "Select CSV File:"
+        FileChooserListView:
+            id: file_chooser
+            filters: ["*.csv"]
+
+        Label:
+            text: "Enter Table Name:"
+        TextInput:
+            id: table_name_input
+
+        Button:
+            text: "Start Importing"
+            size_hint: (None, None)
+            size: (150, 50)
+            on_release: app.start_importing()
