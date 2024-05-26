@@ -1,4 +1,9 @@
 import os
+import sys
+
+# Agregar el directorio 'src' al PATH para que Python pueda encontrar los módulos
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.label import Label
