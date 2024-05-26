@@ -1,5 +1,5 @@
-PGDATABASE = "entrega_owner"
-PGUSER = "entrega_owner_owner"
-PGPASSWORD = "Rofg6C8BcTVk"
+PGDATABASE = "final_owner"
+PGUSER = "final_owner_owner"
+PGPASSWORD = "lM7QyEmHah9g"
 PGHOST = "ep-muddy-band-a581f951.us-east-2.aws.neon.tech"
 PGPORT = 5432
