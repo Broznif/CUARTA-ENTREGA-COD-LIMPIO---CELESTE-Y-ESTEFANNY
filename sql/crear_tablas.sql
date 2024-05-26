@@ -3,11 +3,15 @@ CREATE TABLE IF NOT EXISTS cluster_data (
     data_text TEXT NOT NULL
 );
 
-INSERT INTO cluster_data (data_text)
-VALUES ('aaaaaabccdddeeeeeeefghiiijkllmmnnnooooppqrrrssssttuuvwxyz!@#$%^&*().,AAAAAABCCDDDEEEEEEEFGHIIIJKLLMMNNNOOOOPPQRRRSSSSTTUUVWXYZ');
-
 CREATE TABLE IF NOT EXISTS cluster_info (
     id SERIAL PRIMARY KEY,
     cluster_text TEXT NOT NULL,
     description TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS clustering_results (
+    id SERIAL PRIMARY KEY,
+    filename TEXT NOT NULL,
+    num_clusters INTEGER NOT NULL,
+    cluster_results JSONB NOT NULL
 );
