@@ -22,7 +22,7 @@ class Database:
 
     def create_tables(self):
         create_table_query = """
-            CREATE TABLE IF NOT EXISTS clustering_results (
+            CREATE TABLE IF NOT EXISTS my_schema.clustering_results (
                 id SERIAL PRIMARY KEY,
                 filename TEXT NOT NULL,
                 num_clusters INTEGER NOT NULL,
@@ -34,7 +34,7 @@ class Database:
 
     def insert_clustering_result(self, filename, num_clusters, cluster_results):
         insert_query = """
-            INSERT INTO clustering_results (filename, num_clusters, cluster_results)
+            INSERT INTO my_schema.clustering_results (filename, num_clusters, cluster_results)
             VALUES (%s, %s, %s);
         """
         self.cursor.execute(insert_query, (filename, num_clusters, json.dumps(cluster_results)))
