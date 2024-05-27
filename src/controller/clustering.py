@@ -6,13 +6,13 @@ def process_csv_and_cluster(db, file_path, num_clusters):
     try:
         # Leer el CSV y mostrar los primeros registros para diagnóstico
         data = pd.read_csv(file_path)
-        print("Contenido del CSV:")
-        print(data.head())
+        print("Contenido completo del CSV:")
+        print(data)
         
         # Seleccionar solo columnas numéricas
         numeric_data = data.select_dtypes(include=[np.number])
-        print("Datos numéricos:")
-        print(numeric_data.head())
+        print("Datos numéricos seleccionados:")
+        print(numeric_data)
 
         if numeric_data.empty:
             return False, "No numeric data found in CSV for clustering."
@@ -20,7 +20,7 @@ def process_csv_and_cluster(db, file_path, num_clusters):
         # Convertir todas las columnas a numéricas y manejar errores
         numeric_data = numeric_data.apply(pd.to_numeric, errors='coerce')
         print("Datos numéricos después de to_numeric:")
-        print(numeric_data.head())
+        print(numeric_data)
         
         # Llenar valores nulos con la media de la columna
         numeric_data.fillna(numeric_data.mean(), inplace=True)

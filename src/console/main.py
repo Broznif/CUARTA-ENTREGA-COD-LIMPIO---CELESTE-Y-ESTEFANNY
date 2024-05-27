@@ -48,7 +48,7 @@ class ClusteringApp(App):
     def start_clustering(self, instance):
         try:
             self.num_clusters = int(self.num_clusters_input.text)
-            if self.num_clusters <= 0 or self.num_clusters > 30:
+            if self.num_clusters <= 0 or se num_clusters > 30:
                 raise ValueError("Number of clusters invalid --> Only <30.")
         except ValueError as e:
             self.show_error_popup("Invalid Input", str(e))
