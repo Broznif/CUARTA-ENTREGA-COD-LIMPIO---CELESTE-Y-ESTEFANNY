@@ -13,7 +13,7 @@ from kivy.uix.filechooser import FileChooserListView
 from kivy.uix.popup import Popup
 from controller.clustering import process_csv_and_cluster
 from controller.database import Database
-from console.SecretConfig import PGDATABASE, PGUSER, PGPASSWORD, PGHOST, PGPORT
+from console.secretconfig import PGDATABASE, PGUSER, PGPASSWORD, PGHOST, PGPORT
 
 def build_connection_string():
     return f"dbname={PGDATABASE} user={PGUSER} password={PGPASSWORD} host={PGHOST} port={PGPORT}"
