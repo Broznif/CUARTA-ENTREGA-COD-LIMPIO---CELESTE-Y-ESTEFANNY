@@ -13,12 +13,17 @@ from kivy.uix.filechooser import FileChooserListView
 from kivy.uix.popup import Popup
 from controller.clustering import process_csv_and_cluster
 from controller.database import Database
+from console.SecretConfig import PGDATABASE, PGUSER, PGPASSWORD, PGHOST, PGPORT
+
+def build_connection_string():
+    return f"dbname={PGDATABASE} user={PGUSER} password={PGPASSWORD} host={PGHOST} port={PGPORT}"
 
 class ClusteringApp(App):
     def build(self):
         self.file_path = ""
         self.num_clusters = 0
-        self.db = Database("bdcodlimpio/postgres@PostgresSQL 16")
+        connection_string = build_connection_string()
+        self.db = Database(connection_string)
         self.db.connect()
         self.db.create_tables()
 
