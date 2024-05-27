@@ -18,7 +18,7 @@ class ClusteringApp(App):
     def build(self):
         self.file_path = ""
         self.num_clusters = 0
-        self.db = Database("postgresql://final_owner:lM7QyEmHah9g@ep-muddy-band-a581f951.us-east-2.aws.neon.tech/final?sslmode=require")
+        self.db = Database("bdcodlimpio/postgres@PostgresSQL 16")
         self.db.connect()
         self.db.create_tables()
 
